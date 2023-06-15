@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_sign">
+
+    <fragment
+        android:id="@+id/navigation_sign"
+        android:name="com.example.absensiassesment2mobpro.ui.home.SignFragment"
+        android:label="Absensi"
+        tools:layout="@layout/fragment_sign" >
+        <action
+            android:id="@+id/toAddSign"
+            app:destination="@id/addSignFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.absensiassesment2mobpro.ui.dashboard.ProfileFragment"
+        android:label="Profil Kamu"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/addSignFragment"
+        android:name="com.example.absensiassesment2mobpro.ui.home.add.AddSignFragment"
+        android:label="Tambah Absensi"
+        tools:layout="@layout/fragment_add_sign" />
+
+</navigation>
